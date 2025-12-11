@@ -26,6 +26,6 @@ Model configuration for the three research basins South Tobacco Creek, Whelp Cre
 - The CRHM configuration files used for the three basins are [available HERE.](https://github.com/srlabUsask/crhmcode/tree/crhm_with_erosion).
 
 # Prairies application
-- Data is available HERE.
+- Data is available [here.](https://github.com/lawfordp2017/phd_thesis__final/tree/main/all_prairies).
 - Per-virtual-basin CRHM outputs for 1950-1980 epoch and 1990-2020 epoch.
 - Grouped CRHM outputs annualized.
