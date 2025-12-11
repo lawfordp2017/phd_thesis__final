@@ -1,0 +1,394 @@
+*** CRHM - STC Basin ***
+###### Version: CRHM 09/28/19  Creation: 08/10/2019 15:13
+Dimensions:
+######
+nhru 1
+nlay 2
+nobs 1
+######
+Macros:
+######
+######
+Observations:
+######
+ifc.obs
+######
+Dates:
+######
+2005 1 1
+2012 12 31
+######
+Modules:
+######
+basin CRHM 02/24/12
+global CRHM 04/19/13
+obs CRHM 04/17/18
+calcsun CRHM 10/01/13
+walmsley_wind CRHM 07/30/08
+longVt CRHM 02/10/16
+netall CRHM 03/22/16
+evap_Resist CRHM 11/21/16
+Sed_Detachment CRHM 07/30/08
+WQ_Netroute_M_D#1 CRHM 04/24/17
+CanopyClearing#1 CRHM 04/05/19
+albedo CRHM 08/11/11
+pbsmSnobal CRHM 01/05/17
+SnobalCRHM#2 CRHM 11/21/16
+PrairieInfiltration CRHM 03/22/13
+Volumetric CRHM 04/14/20
+Sed_Soil CRHM 11/28/17
+######
+Parameters:
+###### 'basin' parameters always first
+Shared basin_area <1E-6 to 1E9>
+1.31
+Shared Sdmax
+25
+Shared fallstat
+50
+Shared soil_moist_max
+810
+Shared soil_type
+4
+Shared soil_rechr_max
+50
+Shared soil_Depth
+1.0
+Shared hru_area
+1.31
+basin basin_name
+'Basin'
+basin INIT_STATE
+'' 
+basin Loop_to
+'' '' 
+basin RapidAdvance_to
+'' 
+basin RUN_END <0 to 1E5>
+0 
+basin RUN_ID <-1E8 to 1E8>
+1 
+basin RUN_START <0 to 1E5>
+0 
+basin StateVars_to_Update
+' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' 
+basin TraceVars
+' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' 
+Shared basin_area <1E-6 to 1E9>
+1.31000
+basin hru_names
+'cropped'
+albedo Albedo_bare
+0.17
+albedo Albedo_snow
+0.85
+CanopyClearing Alpha_c
+0.1
+CanopyClearing B_canopy
+0.038
+CanopyClearing CanopyClearing
+1
+CanopyClearing LAI
+2.2
+CanopyClearing Sbar
+6.6
+CanopyClearing unload_t
+1
+CanopyClearing unload_t_water
+4
+CanopyClearing Z0snow
+0.01
+CanopyClearing Zref
+1.5
+CanopyClearing Zvent
+0.75
+evap_Resist evap_type
+0
+evap_Resist F_Qg
+0.01
+evap_Resist Htmax
+0.1
+evap_Resist LAImax
+4
+evap_Resist LAImin
+0
+evap_Resist PMmethod
+1
+evap_Resist rcs
+25
+evap_Resist s
+1
+global Time_Offset
+0
+longVt epsilon_s
+0.98
+longVt Vt
+0.3
+obs catchadjust
+0
+obs ClimChng_flag
+0
+obs ClimChng_precip
+1
+obs ClimChng_t
+0
+obs ElevChng_flag
+0
+obs HRU_OBS
+1
+1
+1
+1
+1
+obs lapse_rate
+0.75
+obs obs_elev
+0
+0
+obs ppt_daily_distrib
+1
+obs precip_elev_adj
+0
+obs snow_rain_determination
+0
+obs tmax_allrain
+2.0
+obs tmax_allsnow
+0
+pbsmSnobal A_S
+0.003
+pbsmSnobal distrib
+0
+pbsmSnobal fetch
+1000
+pbsmSnobal inhibit_bs
+0
+pbsmSnobal inhibit_subl
+0
+pbsmSnobal N_S
+320
+pbsmSnobal Ht
+0.1
+PrairieInfiltration groundcover
+5
+PrairieInfiltration Major
+13
+PrairieInfiltration PriorInfiltration
+1
+PrairieInfiltration texture
+1
+PrairieInfiltration infDays
+6
+Sed_Detachment sedrelmax
+20
+Sed_Detachment sedrelexp
+1.0
+Sed_Detachment canopy_cvg
+0
+Sed_Detachment plant_height
+0
+Sed_Detachment ground_cover
+0
+Sed_Detachment sfcslope
+0.03
+Sed_Detachment slopelen
+0
+Sed_Detachment pct_clay
+35
+Sed_Detachment pct_silt
+10
+Sed_Detachment mmf_d_bare
+0.005
+Sed_Detachment mmf_d_actual
+0.01
+Sed_Detachment mmf_d_tillage
+0.005
+Sed_Detachment mmf_n_bare
+0.015
+Sed_Detachment mmf_n_actual
+0.015
+Sed_Detachment erodibility_clay
+0.1
+Sed_Detachment erodibility_silt
+0.5
+Sed_Detachment erodibility_sand
+0.3
+Sed_Detachment detachibility_clay
+1.0
+Sed_Detachment detachibility_silt
+1.6
+Sed_Detachment detachibility_sand
+1.5
+Sed_Detachment mmf_mannings_n
+0.015
+Sed_Detachment mmf_repr_depth
+0.005
+Sed_Detachment channel_slope
+0.03
+Sed_Detachment vr_mannings_n
+0.104
+Sed_Detachment vr_roughness_height
+0.104
+Sed_Soil cov_type
+1
+Sed_Soil gw_init
+187.0
+Sed_Soil gw_K
+0.0
+Sed_Soil gw_max
+375.0
+Sed_Soil lower_ssr_K
+0.0
+Sed_Soil rechr_ssr_K
+0.0
+Sed_Soil Sdinit
+3.0
+Sed_Soil Sd_gw_K
+0.0
+Sed_Soil Sd_ssr_K
+0.0
+Sed_Soil soil_gw_K
+0
+Sed_Soil soil_moist_init
+729.0
+Sed_Soil soil_rechr_init
+35.0
+Sed_Soil soil_ssr_runoff
+1
+Sed_Soil soil_withdrawal
+2
+2
+Sed_Soil transp_limited
+0
+Sed_Soil Wetlands_scaling_factor
+1
+SnobalCRHM hru_F_g
+0
+SnobalCRHM hru_rho_snow
+100
+SnobalCRHM hru_T_g
+-1
+SnobalCRHM KT_sand
+0.08
+SnobalCRHM max_h2o_vol
+0.1
+SnobalCRHM max_z_s_0
+0.1
+SnobalCRHM rain_soil_snow
+0
+SnobalCRHM relative_hts
+0
+SnobalCRHM T_g_or_G_flux
+0
+SnobalCRHM z_0
+0.0003
+SnobalCRHM z_g
+0.1
+SnobalCRHM z_T
+2
+SnobalCRHM z_u
+10
+Volumetric set_fallstat
+305
+Volumetric Si_correction
+0
+Volumetric Volumetric_option
+1
+walmsley_wind A
+0
+walmsley_wind B
+2
+walmsley_wind L
+1000
+walmsley_wind Walmsley_Ht
+0
+WQ_Netroute_M_D Channel_shp
+0
+WQ_Netroute_M_D distrib_Basin
+1
+WQ_Netroute_M_D distrib_Route
+0
+WQ_Netroute_M_D gwKstorage
+0
+WQ_Netroute_M_D gwLag
+0
+WQ_Netroute_M_D gwwhereto
+0
+WQ_Netroute_M_D Lag
+0
+WQ_Netroute_M_D order
+1
+WQ_Netroute_M_D preferential_flow
+0
+WQ_Netroute_M_D route_L
+200
+WQ_Netroute_M_D route_n
+0.025
+WQ_Netroute_M_D route_R
+0.5
+WQ_Netroute_M_D route_S0
+0.001
+WQ_Netroute_M_D route_X_M
+0.25
+WQ_Netroute_M_D runKstorage
+1.0
+WQ_Netroute_M_D runLag
+0
+WQ_Netroute_M_D scaling_factor
+1
+WQ_Netroute_M_D Sd_ByPass
+0
+WQ_Netroute_M_D soil_rechr_ByPass
+0
+WQ_Netroute_M_D ssrKstorage
+0
+WQ_Netroute_M_D ssrLag
+0
+WQ_Netroute_M_D Kstorage
+0.0
+
+######
+Initial_State
+######
+######
+Final_State
+######
+######
+Summary_period
+######
+Daily
+######
+Log_Time_Format
+######
+YYYY-MM-DD
+######
+Display_Variable:
+######
+WQ_Netroute_M_D basinflow 1
+SnobalCRHM SWE 1
+Sed_Soil soil_moist 1
+Sed_Soil soil_rechr 1
+PrairieInfiltration snowinfil 1
+PrairieInfiltration meltrunoff 1
+Volumetric fallstat_V 1
+WQ_Netroute_M_D basinflow_mWQ 1,1
+WQ_Netroute_M_D basinflow_conc 1,1
+######
+Display_Observation:
+######
+######
+Auto_Run
+######
+Auto_Exit
+######
+Log_All
+######
+TChart:
+######
+ 
+ 
+
+ 
+ 
+ 
+######
